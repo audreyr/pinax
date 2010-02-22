@@ -177,6 +177,7 @@ INSTALLED_APPS = [
     "staticfiles",
     "debug_toolbar",
     "tagging_ext",
+    "debug_toolbar",
     
     # internal (for now)
     "basic_profiles",
