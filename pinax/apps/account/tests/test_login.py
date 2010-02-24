@@ -19,13 +19,15 @@ class LoginTest(TestCase):
     urls = "account.tests.account_urls"
     
     def setUp(self):
-        self.old_installed_apps = settings.INSTALLED_APPS
-        # remove django-mailer to properly test for outbound e-mail
-        if "mailer" in settings.INSTALLED_APPS:
-            settings.INSTALLED_APPS.remove("mailer")
+#        self.old_installed_apps = settings.INSTALLED_APPS
+#        # remove django-mailer to properly test for outbound e-mail
+#        if "mailer" in settings.INSTALLED_APPS:
+#            settings.INSTALLED_APPS.remove("mailer")
+        pass
     
     def tearDown(self):
-        settings.INSTALLED_APPS = self.old_installed_apps
+        pass
+#        settings.INSTALLED_APPS = self.old_installed_apps
     
     def context_lookup(self, response, key):
         # used for debugging
