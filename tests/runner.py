@@ -97,7 +97,8 @@ def setup_test_environment():
         ],
         "INSTALLED_APPS": apps,
         "LOGIN_URL": "/account/login/",
-        
+        "LOGIN_REDIRECT_URLNAME": "after_login",        
+
         "TEMPLATE_DIRS": [
             os.path.join(os.path.dirname(__file__), "templates"),
             os.path.join(os.path.dirname(pinax.__file__), "templates", "default"),

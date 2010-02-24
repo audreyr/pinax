@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.http import HttpResponseServerError
+from django.http import HttpResponseServerError, HttpResponse
 from django.shortcuts import render_to_response
 from django.template import loader, Context, RequestContext
 
@@ -10,7 +10,7 @@ def noop(request):
     provides a callable that can be used to stub out a URL that might be
     mapped by the proxying/containing webserver.
     """
-    pass
+    return HttpResponse("OK")
 
 
 def server_error(request, template_name="500.html"):
